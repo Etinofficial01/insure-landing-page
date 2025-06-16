@@ -14,21 +14,32 @@
 </head>
 <body>
 
-  <header class="flex items-center justify-between p-5">
+  <header class="relative flex items-center justify-between p-5 md:px-10 xl:mx-40">
     <div>
       <img src="./images/logo.svg" alt="insure logo">
     </div>
 
-    <div>
+    <nav
+      class="navbar hidden md:flex flex-col md:flex-row absolute md:relative top-0 right-0 bottom-0 left-0 bg-gray-900 md:bg-transparent h-screen md:h-auto items-center justify-center md:justify-between"
+      id="navbar">
+      <ul class="md:flex md:items-center md:space-x-6 text-white ">
+        <li class="my-3 text-center"><a href="#"class="text-white uppercase md:text-gray-700">How we work</a></li>
+        <li class="my-3 text-center"><a href="#" class="text-white uppercase md:text-gray-700">Blog</a></li>
+        <li class="my-3 text-center"><a href="#" class="text-white uppercase md:text-gray-700">Account</a></li>
+        <li class="my-3 mx-auto text-center border-2 border-white w-40 text-white py-2 px-6 uppercase cursor-pointer md:border-2 md:border-blue-950 hover:bg-blue-950 hover:text-white hover:border-white transition-colors duration-300"><a href="#" class="text-white uppercase md:text-gray-700 hover:text-white">View plans</a></li>
+
+        <li>
+          <img src="./images/bg-pattern-mobile-nav.svg" alt="" class="absolute right-0 bottom-5 w-full sm:hidden lg:hidden ">
+        </li>
+      </ul>
+    </nav>
+
+    <div id="menu-btn" class="cursor-pointer md:hidden">
       <img src="./images/icon-hamburger.svg" alt="humburger menu icon">
     </div>
   </header>
 
-  How we work
-  Blog
-  Account
-  View plans
-
+  <!--Section 1-->
   <section class="showcase ">
     <div>
       <img src="./images/image-intro-mobile.jpg" alt="intro-mobile" class="w-full">
@@ -50,52 +61,67 @@
     </div>
   </section>
 
-  <section class="grid-items items-center">
+  <!--Section 2-->
+  <section class="grid-items pt-44 pb-20 xl:mx-40">
 
-    <h2 class="">We’re different</h2>
+    <div class="underline mx-auto lg:mx-10"></div>
 
-    <div class="cards">
-      <div class="card">
-        <img src="./images/icon-snappy-process.svg" alt="snappy process icon">
-        <h3>Snappy Process</h3>
+    <h2 class="text-center text-4xl mt-5 mb-10 lg:text-left px-10">We’re different</h2>
+
+    <div class="cards grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3 lg:px-10">
+      <div class="card text-center px-10 lg:text-left lg:px-0">
+        <img src="./images/icon-snappy-process.svg" alt="snappy process icon" class="mx-auto block lg:ml-0">
+        <h3 class="my-5">Snappy Process</h3>
         <p>Our application process can be completed in minutes, not hours. Don’t get stuck filling in tedious forms.</p>
       </div>
 
-      <div class="card">
-        <img src="./images/icon-affordable-prices.svg" alt="affordable prices icon">
-        <h3>Affordable Prices</h3>
+      <div class="card text-center px-10 lg:text-left lg:px-0">
+        <img src="./images/icon-affordable-prices.svg" alt="affordable prices icon" class="mx-auto block lg:ml-0">
+        <h3 class="my-5">Affordable Prices</h3>
         <p>We don’t want you worrying about high monthly costs. Our prices may be low, but we still offer the best coverage possible.</p>
       </div>
 
-      <div class="card">
-        <img src="./images/icon-people-first.svg" alt="people first icon">
-        <h3>People First</h3>
+      <div class="card text-center px-10 lg:text-left lg:px-0">
+        <img src="./images/icon-people-first.svg" alt="people first icon" class="mx-auto block lg:ml-0">
+        <h3 class="my-5">People First</h3>
         <p>Our plans aren’t full of conditions and clauses to prevent payouts. We make sure you’re covered when you need it.</p>
       </div>
     </div>
 
   </section>
 
-  <section>
-    <div>
-      <h3>Find out more about how we work</h3>
-      <button>How we work</button>
+
+  <!--Section 3-->
+  <section class="showcase-inner  mx-5 lg:hidden">
+    <div class=" text-center py-20 relative">
+      <h3 class="text-white text-4xl px-10">Find out more about how we work</h3>
+      <button class="border-2 border-white text-white py-2 px-6 uppercase cursor-pointer mt-5 mx-auto">How we work</button>
+      <img src="./images/bg-pattern-how-we-work-mobile.svg" alt="bg-pattern-how-we-work-mobile" class="absolute top-0 right-0 w-40">
+    </div>
+  </section>
+
+  <!--How we work = Desktop-->
+  <section class="relative showcase-inner hidden lg:block lg:py-28 lg:mx-10 xl:mx-40">
+    <img src="./images/bg-pattern-how-we-work-desktop.svg" alt="" class="absolute top-0 right-0 ">
+    <div class="px-10 flex items-center justify-between">
+      <h3 class="text-white text-5xl w-1/2">Find out more about how we work</h3>
+      <button class="border-2 border-white text-white py-2 px-6 uppercase cursor-pointer mx-auto">How we work</button>
     </div>
   </section>
 
 
-  <footer>
-
-    <div>
+  <footer class="py-20 text-center bg-gray-100 pt-10 pb-20 mt-20 relative ">
+    <img src="./images/bg-pattern-footer-mobile.svg" alt="" class="absolute top-0 right-0 w-full">
+    <div class="pt-36 sm:pt-0">
       <div>
-      <img src="./images/logo.svg" alt="insure logo">
+      <img src="./images/logo.svg" alt="insure logo" class="block mx-auto">
     </div>
 
-    <ul>
-      <li><i class="fab fa-facebook"></i></li>
-      <li><i class="fab fa-twitter"></i></li>
-      <li><i class="fab fa-pinterest"></i></li>
-      <li><i class="fab fa-instagram"></i></li>
+    <ul class="flex justify-center items-center space-x-4 mt-5 mb-5 border-b border-gray-600 mx-5 pb-5">
+      <li class="text-gray-600 text-2xl cursor-pointer"><i class="fab fa-facebook"></i></li>
+      <li class="text-gray-600 text-2xl cursor-pointer"><i class="fab fa-twitter"></i></li>
+      <li class="text-gray-600 text-2xl cursor-pointer"><i class="fab fa-pinterest"></i></li>
+      <li class="text-gray-600 text-2xl cursor-pointer"><i class="fab fa-instagram"></i></li>
     </ul>
     </div>
     
@@ -142,6 +168,6 @@
     </div>
   </footer>
   
-
+  <script src="script.js"></script>
 </body>
 </html>
