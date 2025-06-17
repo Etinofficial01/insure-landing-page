@@ -24,8 +24,21 @@ body{
     background-color: hsl(256, 26%, 20%);
 }
 
+.pattern::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    background-image: url(./images/bg-pattern-intro-right-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: top right;
+    right: -70px;
+    height: 100%;
+    width: 50%;
+    z-index: 2;
+}
+
 .underline{
-    background-color: hsl(273, 4%, 51%);
+    background-color: var(--gray-700);
     width: 150px;
     height: 1px;
 }
