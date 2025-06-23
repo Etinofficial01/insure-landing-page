@@ -2,10 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="style.css">
+ 
  
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -26,7 +27,16 @@
         <li class="my-3 text-center"><a href="#"class="text-white uppercase md:text-gray-700">How we work</a></li>
         <li class="my-3 text-center"><a href="#" class="text-white uppercase md:text-gray-700">Blog</a></li>
         <li class="my-3 text-center"><a href="#" class="text-white uppercase md:text-gray-700">Account</a></li>
-        <li class="my-3 mx-auto text-center border-2 border-white w-40 text-white py-2 px-6 uppercase cursor-pointer md:border-2 md:border-blue-950 hover:bg-blue-950 hover:text-white hover:border-white transition-colors duration-300"><a href="#" class="text-white uppercase md:text-gray-700 hover:text-white">View plans</a></li>
+        <li class="my-3 mx-auto text-center border-2 w-40 py-2 px-6 uppercase cursor-pointer 
+        border-white text-white bg-transparent
+        hover:bg-white hover:text-blue-950 hover:border-blue-950 
+        md:border-blue-950 md:text-blue-950 md:bg-transparent 
+        md:hover:bg-blue-950 md:hover:text-white md:hover:border-white 
+        transition-colors duration-300">
+  
+        <a href="#" class="uppercase block w-full h-full">View plans</a>
+        </li>
+
 
         <li>
           <img src="./images/bg-pattern-mobile-nav.svg" alt="" class="absolute right-0 bottom-5 w-full sm:hidden lg:hidden ">
@@ -39,8 +49,8 @@
       <img src="./images/icon-hamburger.svg" alt="humburger menu icon">
     </div>
 
-    <div id="close-btn"  class="hidden">
-      <img src="./images/icon-close.svg" alt="close-icon" class=" cursor-pointer">
+    <div id="close-btn"  class="hidden cursor-pointer z-1000 md:hidden">
+      <img src="./images/icon-close.svg" alt="close-icon">
     </div>
   </header>
 
@@ -91,9 +101,6 @@
       <img src="./images/image-intro-desktop.jpg" alt="intro-desktop" >
     </div>
 
-    <!--<div>
-      <img src="./images/bg-pattern-intro-right-desktop.svg" alt="" class="absolute top-[-20%] right-0 ">
-    </div>-->
   </section>
 
   <!--Section 2-->
